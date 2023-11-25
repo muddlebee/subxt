@@ -60,7 +60,7 @@ impl<T: Config> OnlineClient<T> {
     /// Construct a new [`OnlineClient`] using default settings which
     /// point to a locally running node on `ws://127.0.0.1:9944`.
     pub async fn new() -> Result<OnlineClient<T>, Error> {
-        let url = "ws://127.0.0.1:9944";
+        let url = "wss://westend-rpc.polkadot.io";
         OnlineClient::from_url(url).await
     }
 
